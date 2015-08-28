@@ -1,0 +1,24 @@
+{
+    "name": "leoruhland/cakephp-resize",
+    "description": "Resize plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "require": {
+        "php": ">=5.4.16",
+        "cakephp/cakephp": "~3.0",
+        "gregwar/image": "2.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Resize\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Resize\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}
