@@ -12,3 +12,12 @@ The recommended way to install composer packages is:
 ```
 composer require leoruhland/cakephp-resize
 ```
+
+Now load the plugin:
+
+```
+$ bin/cake plugin load -r Resize
+```
+
+You are all set! Now call your resized images like `domain.com/resize/200x200/img/myself.png`.
+The `img/myself.png` should be located into your `webroot`.

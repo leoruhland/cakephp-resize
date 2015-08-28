@@ -20,13 +20,13 @@ class ResizeController extends AppController
         $width = (int)$dimensions[0];
         $height = (int)$dimensions[1];
         if($width > 0 && $height > 0){
-            $cacheFilename = 'img' . DS . 'resize' . DS . $size . DS . $filename;
+            $cacheFilename = 'resize' . DS . $size . DS . $filename;
             if(!file_exists($cacheFilename)){
-                $cacheFilename = Image::open('img' . DS . $filename)
+                $cacheFilename = Image::open($filename)
                 ->zoomCrop($width, $height, 'transparent', 'center', 'center')
                 ->save($cacheFilename);
             }
-            $this->redirect(DS.$cacheFilename);
+            $this->redirect($cacheFilename);
         }
     }
 }
