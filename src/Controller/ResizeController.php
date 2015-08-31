@@ -7,6 +7,16 @@ use Gregwar\Image\Image;
 
 class ResizeController extends AppController
 {
+
+    public function initialize()
+    {
+        parent::initialize();
+
+        if($this->Auth) {
+            $this->Auth->allow('resize');
+        }
+    }
+
     public function resize($size="", $filename = "")
     {
         $this->autoRender = false;
