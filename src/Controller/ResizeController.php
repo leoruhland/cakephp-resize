@@ -36,7 +36,7 @@ class ResizeController extends AppController
                 ->zoomCrop($width, $height, 'transparent', 'center', 'center')
                 ->save($cacheFilename);
             }
-            $this->redirect($cacheFilename);
+            $this->redirect('/'.$cacheFilename);
         }
     }
 }
