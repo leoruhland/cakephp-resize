@@ -22,7 +22,7 @@ bin/cake plugin load -r Resize
 You are all set! Now call your resized images like `domain.com/resize/200x200/img/myself.png`.
 The `img/myself.png` should be located into your `webroot`.
 
-## Configure
+## Configuration
 
 To configure the plugin, you should add to your `app\bootstrap.php`:
 
