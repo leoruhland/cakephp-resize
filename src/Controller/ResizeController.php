@@ -19,7 +19,7 @@ class ResizeController extends AppController
             $this->Auth->allow('resize');
         }
 
-        $this->config = Configure::read('Resize.settings');
+        $this->config = Configure::read('Resize');
     }
 
     public function resize($fullSize="", $filename = "")
